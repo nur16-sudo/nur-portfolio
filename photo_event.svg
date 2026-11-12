@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050912"/>
+      <stop offset="50%" stop-color="#09142e"/>
+      <stop offset="100%" stop-color="#0F1F6D"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#162E93"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(96, 165, 250, 0.07)" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- Top Accent Beam -->
+  <rect x="0" y="0" width="800" height="4" fill="url(#primaryGrad)"/>
+
+  <!-- Header Meta -->
+  <g transform="translate(40, 45)">
+    <rect x="0" y="0" width="120" height="24" rx="12" fill="rgba(96, 165, 250, 0.12)" stroke="rgba(96, 165, 250, 0.3)"/>
+    <circle cx="12" cy="12" r="4" fill="#60A5FA"/>
+    <text x="24" y="16" fill="#60A5FA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">PHOTOGRAPHY</text>
+  </g>
+
+  <!-- Visual Central Workspace -->
+  <g transform="translate(40, 90)">
+    
+      <!-- Auditorium Stage Silhouette -->
+      <rect x="0" y="0" width="720" height="310" rx="12" fill="#070D1D" stroke="rgba(96, 165, 250, 0.25)"/>
+      
+      <!-- Stage Spotlights -->
+      <polygon points="100,0 280,240 380,240" fill="url(#cyanGlow)" opacity="0.3"/>
+      <polygon points="620,0 340,240 440,240" fill="url(#cyanGlow)" opacity="0.3"/>
+
+      <!-- Speaker Silhouette at Podium -->
+      <rect x="345" y="160" width="30" height="80" fill="#0A1329"/>
+      <circle cx="360" cy="130" r="16" fill="#162E93"/>
+      <path d="M 335 180 C 335 150 385 150 385 180 Z" fill="#60A5FA"/>
+
+      <!-- Stage Backdrop Screen -->
+      <rect x="220" y="50" width="280" height="80" rx="6" fill="#0A1329" stroke="rgba(96, 165, 250, 0.3)"/>
+      <text x="360" y="95" text-anchor="middle" fill="#FFFFFF" font-size="14" font-weight="700">ANNUAL CSE SUMMIT</text>
+
+      <!-- Audience Silhouettes -->
+      <path d="M 0 310 Q 60 260 120 310 Q 180 250 240 310 Q 300 265 360 310 Q 420 250 480 310 Q 540 265 600 310 Q 660 255 720 310 Z" fill="#04070F"/>
+    
+  </g>
+
+  <!-- Bottom Label Bar -->
+  <g transform="translate(40, 435)">
+    <line x1="0" y1="0" x2="720" y2="0" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    <text x="0" y="32" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">Institutional Event Documentation</text>
+    <text x="720" y="32" text-anchor="end" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Low-Light Stage • Decisive Moments • Batch Color</text>
+  </g>
+</svg>

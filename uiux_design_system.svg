@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050912"/>
+      <stop offset="50%" stop-color="#09142e"/>
+      <stop offset="100%" stop-color="#0F1F6D"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#162E93"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(96, 165, 250, 0.07)" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- Top Accent Beam -->
+  <rect x="0" y="0" width="800" height="4" fill="url(#primaryGrad)"/>
+
+  <!-- Header Meta -->
+  <g transform="translate(40, 45)">
+    <rect x="0" y="0" width="120" height="24" rx="12" fill="rgba(96, 165, 250, 0.12)" stroke="rgba(96, 165, 250, 0.3)"/>
+    <circle cx="12" cy="12" r="4" fill="#60A5FA"/>
+    <text x="24" y="16" fill="#60A5FA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">UI/UX DESIGN</text>
+  </g>
+
+  <!-- Visual Central Workspace -->
+  <g transform="translate(40, 90)">
+    
+      <!-- Canvas Board -->
+      <rect x="0" y="0" width="720" height="310" rx="12" fill="#070D1D" stroke="rgba(96, 165, 250, 0.25)" stroke-width="1.5"/>
+      <text x="30" y="35" fill="#60A5FA" font-size="14" font-weight="700">COLOR PALETTE TOKENS</text>
+      
+      <!-- Color Chips -->
+      <g transform="translate(30, 50)">
+        <rect x="0" y="0" width="60" height="45" rx="6" fill="#050912" stroke="#60A5FA" stroke-width="1"/>
+        <text x="5" y="60" fill="#94A3B8" font-size="9">#050912</text>
+        
+        <rect x="75" y="0" width="60" height="45" rx="6" fill="#162E93"/>
+        <text x="80" y="60" fill="#94A3B8" font-size="9">#162E93</text>
+
+        <rect x="150" y="0" width="60" height="45" rx="6" fill="#0F1F6D"/>
+        <text x="155" y="60" fill="#94A3B8" font-size="9">#0F1F6D</text>
+
+        <rect x="225" y="0" width="60" height="45" rx="6" fill="#60A5FA"/>
+        <text x="230" y="60" fill="#60A5FA" font-size="9" font-weight="700">#60A5FA</text>
+
+        <rect x="300" y="0" width="60" height="45" rx="6" fill="#FFFFFF"/>
+        <text x="305" y="60" fill="#FFFFFF" font-size="9">#FFFFFF</text>
+      </g>
+
+      <!-- Typography Scale -->
+      <g transform="translate(420, 30)">
+        <text x="0" y="20" fill="#60A5FA" font-size="14" font-weight="700">TYPOGRAPHY HIERARCHY</text>
+        <text x="0" y="55" fill="#FFFFFF" font-size="24" font-weight="800">Display Hero (48px)</text>
+        <text x="0" y="85" fill="#FFFFFF" font-size="18" font-weight="700">H2 Section Heading (28px)</text>
+        <text x="0" y="110" fill="#94A3B8" font-size="14">Body Regular Inter Sans-Serif (16px)</text>
+      </g>
+
+      <!-- Component Variants Section -->
+      <line x1="30" y1="165" x2="690" y2="165" stroke="rgba(255,255,255,0.08)"/>
+      <text x="30" y="195" fill="#60A5FA" font-size="14" font-weight="700">BUTTON ATOMS & VARIANTS</text>
+      
+      <!-- Primary Pill -->
+      <g transform="translate(30, 215)">
+        <rect x="0" y="0" width="140" height="42" rx="21" fill="url(#primaryGrad)"/>
+        <text x="70" y="26" text-anchor="middle" fill="#FFFFFF" font-size="12" font-weight="700">Primary CTA</text>
+      </g>
+
+      <!-- Cyber Outline -->
+      <g transform="translate(190, 215)">
+        <rect x="0" y="0" width="140" height="42" rx="8" fill="rgba(96, 165, 250, 0.08)" stroke="#60A5FA" stroke-width="1.5"/>
+        <text x="70" y="26" text-anchor="middle" fill="#60A5FA" font-size="12" font-weight="700">Cyber Glass</text>
+      </g>
+
+      <!-- Ghost / Secondary -->
+      <g transform="translate(350, 215)">
+        <rect x="0" y="0" width="140" height="42" rx="8" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.15)"/>
+        <text x="70" y="26" text-anchor="middle" fill="#FFFFFF" font-size="12">Secondary</text>
+      </g>
+    
+  </g>
+
+  <!-- Bottom Label Bar -->
+  <g transform="translate(40, 435)">
+    <line x1="0" y1="0" x2="720" y2="0" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    <text x="0" y="32" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">Creative Portfolio UI Design System</text>
+    <text x="720" y="32" text-anchor="end" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Design Tokens • Auto-Layout • Atomic UI</text>
+  </g>
+</svg>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050912"/>
+      <stop offset="50%" stop-color="#09142e"/>
+      <stop offset="100%" stop-color="#0F1F6D"/>
+    </linearGradient>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#162E93"/>
+      <stop offset="100%" stop-color="#60A5FA"/>
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#60A5FA" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#60A5FA" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(96, 165, 250, 0.07)" stroke-width="1"/>
+    </pattern>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background Layer -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+  <rect width="800" height="500" fill="url(#grid)"/>
+
+  <!-- Top Accent Beam -->
+  <rect x="0" y="0" width="800" height="4" fill="url(#primaryGrad)"/>
+
+  <!-- Header Meta -->
+  <g transform="translate(40, 45)">
+    <rect x="0" y="0" width="120" height="24" rx="12" fill="rgba(96, 165, 250, 0.12)" stroke="rgba(96, 165, 250, 0.3)"/>
+    <circle cx="12" cy="12" r="4" fill="#60A5FA"/>
+    <text x="24" y="16" fill="#60A5FA" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="700" letter-spacing="1">DIGITAL MARKETING</text>
+  </g>
+
+  <!-- Visual Central Workspace -->
+  <g transform="translate(40, 90)">
+    
+      <rect x="0" y="0" width="720" height="310" rx="12" fill="#070D1D" stroke="rgba(96, 165, 250, 0.25)"/>
+      
+      <!-- Campaign Funnel Blocks -->
+      <!-- TOFU -->
+      <polygon points="60,40 660,40 580,105 140,105" fill="#162E93" opacity="0.6"/>
+      <text x="360" y="75" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="700">TOP OF FUNNEL (TOFU): 120,000 IMPRESSIONS</text>
+
+      <!-- MOFU -->
+      <polygon points="145,115 575,115 510,180 210,180" fill="#0F1F6D" stroke="#60A5FA" stroke-width="1.5"/>
+      <text x="360" y="152" text-anchor="middle" fill="#60A5FA" font-size="13" font-weight="700">MIDDLE OF FUNNEL (MOFU): 12,450 CLICKS (CTR 10.3%)</text>
+
+      <!-- BOFU -->
+      <polygon points="215,190 505,190 450,250 270,250" fill="url(#primaryGrad)"/>
+      <text x="360" y="225" text-anchor="middle" fill="#FFFFFF" font-size="13" font-weight="800">BOTTOM OF FUNNEL (BOFU): 1,120 CONVERSIONS</text>
+
+      <!-- Outcome Badge -->
+      <rect x="290" y="265" width="140" height="30" rx="15" fill="#10B981"/>
+      <text x="360" y="284" text-anchor="middle" fill="#050912" font-size="11" font-weight="800">4.8X ROAS ACHIEVED</text>
+    
+  </g>
+
+  <!-- Bottom Label Bar -->
+  <g transform="translate(40, 435)">
+    <line x1="0" y1="0" x2="720" y2="0" stroke="rgba(255, 255, 255, 0.1)" stroke-width="1"/>
+    <text x="0" y="32" fill="#FFFFFF" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="700">Meta Ads Conversion Campaign Architecture</text>
+    <text x="720" y="32" text-anchor="end" fill="#94A3B8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13">Meta Ads Manager • Pixel • A/B Testing</text>
+  </g>
+</svg>
