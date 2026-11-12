@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD FOYSAL AL NUR — UI/UX Designer & Creative Technologist</title>
+  <meta name="description" content="Personal portfolio of MD FOYSAL AL NUR. Computer Science & Engineering, UI/UX Design, Video Editing, Graphic Design, and Web Development.">
+  
+  <!-- Google Fonts Preconnect & Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css?v=2.2">
+  <link rel="stylesheet" href="css/components.css?v=2.2">
+</head>
+<body>
+
+  <!-- Dynamic Cyber Ambient Particle Canvas (Phase 1 Unique Background Animation) -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- ==========================================================================
+       TOP NAVIGATION BAR
+       ========================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="brand-logo" aria-label="MD FOYSAL AL NUR Home">
+        <div class="brand-monogram">
+          <img src="assets/logo_transparent.png" alt="MD Foysal Al Nur Monogram" height="38">
+        </div>
+        <div class="brand-text">
+          <span class="brand-name">FOYSAL <span>AL NUR</span></span>
+          <span class="brand-tagline">Designer & Architect</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Menu: 4 Primary Links + More Dropdown -->
+      <nav>
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li class="nav-dropdown-item" id="navDropdownItem">
+            <button class="nav-more-btn" id="navMoreBtn" type="button" aria-haspopup="true" aria-expanded="false" title="More sections">
+              <span>More</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="1.5"></circle><circle cx="19" cy="12" r="1.5"></circle><circle cx="5" cy="12" r="1.5"></circle></svg>
+            </button>
+            <div class="nav-dropdown-menu" id="navDropdownMenu">
+              <a href="#software" class="dropdown-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                <span>Software & Tools</span>
+              </a>
+              <a href="#experience" class="dropdown-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                <span>Experience Timeline</span>
+              </a>
+              <a href="#education" class="dropdown-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                <span>Education & Qualifications</span>
+              </a>
+              <a href="#social" class="dropdown-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                <span>Social Media</span>
+              </a>
+              <a href="#reviews" class="dropdown-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span>Feedback & Reviews</span>
+              </a>
+              <a href="#contact" class="dropdown-link">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <span>Contact Me</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Nav Actions -->
+      <div class="nav-actions">
+        <a href="admin.html" class="admin-portal-link" title="Private Admin Dashboard">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span>Admin</span>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         1. HOME / HERO SECTION (PHASE 2)
+         Two-column hero:
+         LEFT: Welcome, Name, Animated 8 Roles, Professional Intro, 3 CTA Buttons.
+         RIGHT: Real transparent portrait cutout, no box, no frame, no circle.
+         ========================================================================== -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Hero Left Column: Intro & Typography -->
+          <div class="hero-content">
+            <div class="hero-status">
+              <span class="status-pulse"></span>
+              <span>Welcome to My Portfolio</span>
+            </div>
+
+            <h1 class="hero-name">
+              MD FOYSAL <br>
+              <span class="gold-highlight text-shimmer">AL NUR</span>
+            </h1>
+
+            <!-- Animated Role Titles (Typing Rotation) -->
+            <div class="hero-role-typing">
+              <span class="role-prefix">I am a</span>
+              <span id="heroTypewriter" class="typewriter-text">UI/UX Designer</span>
+              <span class="typewriter-cursor">|</span>
+            </div>
+
+            <p class="hero-description">
+              Computer Science &amp; Engineering professional combining structured engineering logic with high-end digital design. Specializing in intuitive user interfaces, cinematic video editing, brand aesthetics, and modern web experiences.
+            </p>
+
+            <!-- 3 CTA Buttons: View Projects, Download CV, Contact Me -->
+            <div class="hero-cta-group">
+              <a href="#projects" class="btn btn-primary">
+                <span>View Projects</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="assets/Foysal_Al_Nur_CV.pdf" download class="btn btn-cyber" target="_blank" rel="noopener noreferrer">
+                <span>Download CV</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Authentic Stats Row -->
+            <div class="hero-stats-row">
+              <div class="stat-item">
+                <span class="stat-number">4<span>+</span></span>
+                <span class="stat-label">Years of Hands-on Practice</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">8<span></span></span>
+                <span class="stat-label">Creative Disciplines</span>
+              </div>
+              <div class="stat-item">
+                <span class="stat-number">100<span>%</span></span>
+                <span class="stat-label">Precision &amp; Quality</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Right Column: Real Portrait (Transparent Cutout, No Box, No Border) -->
+          <div class="hero-portrait-wrapper">
+            <img 
+              src="assets/portrait_cutout.png" 
+              alt="MD FOYSAL AL NUR — Real Portrait" 
+              class="hero-portrait-img"
+              width="600"
+              height="600"
+              loading="eager"
+            >
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         2. ABOUT ME SECTION (PHASE 3)
+         Heading: "Beyond Creativity. Driven by Technology."
+         Introduction: "I'm MD Foysal Al Nur, a creative and technology-focused individual interested in design, development and digital media."
+         My Journey: UI/UX • Web Development • Photography • Videography • IT & Digital Marketing
+         Strengths: Creative Thinking, Problem Solving, Teamwork, Quick Learning
+         Details: Location: Dhaka, Bangladesh | Education: Computer Science
+         Button: Download CV
+         ========================================================================== -->
+    <section class="section section-alt" id="about">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Profile Overview</span>
+          </div>
+          <h2 class="section-title">Beyond Creativity. <span class="text-gold">Driven by Technology.</span></h2>
+          <p class="section-subtitle">Bridging aesthetic elegance with architectural computing logic.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Narrative & Journey -->
+          <div class="about-narrative">
+            <p class="about-lead">
+              I'm <strong>MD Foysal Al Nur</strong>, a creative and technology-focused individual interested in design, development and digital media.
+            </p>
+            
+            <!-- My Journey Strip -->
+            <div class="about-journey-card">
+              <span class="journey-badge-title">My Journey</span>
+              <div class="journey-pills">
+                <span class="journey-pill">UI/UX</span>
+                <span class="journey-sep">•</span>
+                <span class="journey-pill">Web Development</span>
+                <span class="journey-sep">•</span>
+                <span class="journey-pill">Photography</span>
+                <span class="journey-sep">•</span>
+                <span class="journey-pill">Videography</span>
+                <span class="journey-sep">•</span>
+                <span class="journey-pill">IT &amp; Digital Marketing</span>
+              </div>
+            </div>
+
+            <!-- Strengths Grid -->
+            <div class="about-strengths-section">
+              <h4 class="strengths-title">Core Strengths</h4>
+              <div class="about-pillars">
+                <div class="pillar-item">
+                  <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                  <div class="pillar-content">
+                    <h4>Creative Thinking</h4>
+                    <p>Innovative visual problem solving and original concepts.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-item">
+                  <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                  <div class="pillar-content">
+                    <h4>Problem Solving</h4>
+                    <p>Analytical troubleshooting and structured technical logic.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-item">
+                  <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                  <div class="pillar-content">
+                    <h4>Teamwork</h4>
+                    <p>Collaborative spirit, clear communication &amp; coordination.</p>
+                  </div>
+                </div>
+
+                <div class="pillar-item">
+                  <svg class="pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                  </svg>
+                  <div class="pillar-content">
+                    <h4>Quick Learning</h4>
+                    <p>Rapid adaptation to emerging tools and modern frameworks.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Download CV Actions -->
+            <div class="about-actions">
+              <a href="assets/Foysal_Al_Nur_CV.pdf" target="_blank" class="btn btn-primary" download>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download CV</span>
+              </a>
+              <a href="assets/Nur_Video_Editor_CV.pdf" target="_blank" class="btn btn-cyber" download>
+                <span>Video Editor CV</span>
+              </a>
+              <a href="assets/Nur_Receptionist_CV.pdf" target="_blank" class="btn btn-outline" download>
+                <span>Administration CV</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Compact Profile Details Card -->
+          <div class="about-card-info">
+            <h3 class="info-title">
+              <svg class="info-title-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span>Verified Details</span>
+            </h3>
+
+            <ul class="info-list">
+              <li class="info-item">
+                <span class="info-label">Full Name</span>
+                <span class="info-value">MD FOYSAL AL NUR</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Location</span>
+                <span class="info-value">Dhaka, Bangladesh</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Education</span>
+                <span class="info-value">Computer Science (B.Sc CSE)</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Institution</span>
+                <span class="info-value">Northern University Bangladesh</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Diploma</span>
+                <span class="info-value">Cumilla Polytechnic Institute</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Languages</span>
+                <span class="info-value">Bangla (Native), English (Proficient)</span>
+              </li>
+              <li class="info-item">
+                <span class="info-label">Availability</span>
+                <span class="info-value gold">Available for Opportunities</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         3. MY SKILLS SECTION
+         Requirement: 6 cards initially with a "View All" option.
+         ========================================================================== -->
+    <section class="section" id="skills">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Core Competencies</span>
+          </div>
+          <h2 class="section-title">My Professional <span class="text-gold">Skills</span></h2>
+          <p class="section-subtitle">A balanced fusion of visual craft, software toolsets, and computational engineering.</p>
+        </div>
+
+        <!-- Initial 6 Skill Cards -->
+        <div class="skills-grid" id="primarySkillsGrid">
+          
+          <!-- Skill 1: UI/UX Design -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="21" x2="9" y2="9"></line>
+                </svg>
+              </div>
+              <span class="skill-index">01</span>
+            </div>
+            <h3 class="skill-title">UI/UX Design</h3>
+            <p class="skill-desc">
+              Designing user-friendly interfaces, responsive layouts, interactive wireframes, and design systems adhering to usability standards.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Wireframing &amp; interactive clickable prototypes</li>
+                <li class="capabilities-item">Usability heuristics &amp; user persona flows</li>
+                <li class="capabilities-item">Component library &amp; atomic token architecture</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Figma</span>
+                <span class="skill-tag">Adobe XD</span>
+                <span class="skill-tag">FigJam</span>
+                <span class="skill-tag">Prototyping</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 2: Web Development -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <span class="skill-index">02</span>
+            </div>
+            <h3 class="skill-title">Web Development</h3>
+            <p class="skill-desc">
+              Developing modern, responsive, and performance-optimized front-end websites using clean semantic markup and interactive scripting.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Responsive mobile-first website development</li>
+                <li class="capabilities-item">Interactive DOM manipulation &amp; state management</li>
+                <li class="capabilities-item">Clean modular code with cross-browser fidelity</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">HTML5</span>
+                <span class="skill-tag">CSS3</span>
+                <span class="skill-tag">JavaScript</span>
+                <span class="skill-tag">VS Code</span>
+                <span class="skill-tag">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 3: Video Editing -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="23 7 16 12 23 17 23 7"></polygon>
+                  <rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect>
+                </svg>
+              </div>
+              <span class="skill-index">03</span>
+            </div>
+            <h3 class="skill-title">Video Editing</h3>
+            <p class="skill-desc">
+              Crafting engaging short-form reels, YouTube Shorts, event highlights, transitions, and audio beat synchronization across video suites.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Short-form vertical reels &amp; viral social cuts</li>
+                <li class="capabilities-item">Beat-synced cuts, audio leveling &amp; sound effects</li>
+                <li class="capabilities-item">Text animations, kinetic subtitles &amp; transitions</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">CapCut</span>
+                <span class="skill-tag">InShot</span>
+                <span class="skill-tag">Premiere Pro</span>
+                <span class="skill-tag">After Effects</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 4: Photography -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"></path>
+                  <circle cx="12" cy="13" r="4"></circle>
+                </svg>
+              </div>
+              <span class="skill-index">04</span>
+            </div>
+            <h3 class="skill-title">Photography</h3>
+            <p class="skill-desc">
+              Portrait sessions, corporate event coverage, environmental lighting composition, and RAW image enhancement.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Natural light &amp; studio portrait framing</li>
+                <li class="capabilities-item">Event documentation &amp; candid moment capture</li>
+                <li class="capabilities-item">Color correction, skin retouching &amp; exposure tuning</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Adobe Lightroom</span>
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Presets</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 5: Videography -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"></rect>
+                  <line x1="7" y1="2" x2="7" y2="22"></line>
+                  <line x1="17" y1="2" x2="17" y2="22"></line>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <line x1="2" y1="7" x2="7" y2="7"></line>
+                  <line x1="2" y1="17" x2="7" y2="17"></line>
+                  <line x1="17" y1="17" x2="22" y2="17"></line>
+                  <line x1="17" y1="7" x2="22" y2="7"></line>
+                </svg>
+              </div>
+              <span class="skill-index">05</span>
+            </div>
+            <h3 class="skill-title">Videography</h3>
+            <p class="skill-desc">
+              Widescreen event recording, dynamic camera movement, cinematic b-roll coverage, and multi-angle production.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Event footage capture &amp; gimbal stabilization</li>
+                <li class="capabilities-item">Composition, framing &amp; storytelling pacing</li>
+                <li class="capabilities-item">4K multi-cam footage synchronization &amp; curation</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Gimbal Rig</span>
+                <span class="skill-tag">4K Production</span>
+                <span class="skill-tag">CapCut</span>
+                <span class="skill-tag">Premiere</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 6: Graphic Design -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"></path>
+                </svg>
+              </div>
+              <span class="skill-index">06</span>
+            </div>
+            <h3 class="skill-title">Graphic Design</h3>
+            <p class="skill-desc">
+              Developing cohesive visual branding, advertising creatives, vector typography, promotional banners, and social assets.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Social media ad creatives &amp; promotional graphics</li>
+                <li class="capabilities-item">Vector logos, icons &amp; brand typography</li>
+                <li class="capabilities-item">Print flyers, stationery &amp; corporate banners</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Photoshop</span>
+                <span class="skill-tag">Illustrator</span>
+                <span class="skill-tag">Canva</span>
+                <span class="skill-tag">Branding</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Extended Skills (Revealed via "View All" Button - 7 More Cards) -->
+        <div class="skills-extended" id="extendedSkills">
+          
+          <!-- Skill 7: Digital Marketing -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                  <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+                </svg>
+              </div>
+              <span class="skill-index">07</span>
+            </div>
+            <h3 class="skill-title">Digital Marketing</h3>
+            <p class="skill-desc">
+              Multi-channel digital marketing execution, brand awareness campaigns, content distribution, and conversion tracking.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Social media growth strategies &amp; posting calendars</li>
+                <li class="capabilities-item">Audience targeting, demographics &amp; interest clusters</li>
+                <li class="capabilities-item">Creative copywriting &amp; campaign engagement analysis</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Meta Suite</span>
+                <span class="skill-tag">Analytics</span>
+                <span class="skill-tag">Content Strategy</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 8: IT Support -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                  <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                  <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                </svg>
+              </div>
+              <span class="skill-index">08</span>
+            </div>
+            <h3 class="skill-title">IT Support</h3>
+            <p class="skill-desc">
+              Professional technical troubleshooting, hardware assembly, operating system deployment, and diagnostic support.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">PC assembly, hardware diagnostics &amp; component upgrades</li>
+                <li class="capabilities-item">Windows installation, driver setups &amp; malware cleanup</li>
+                <li class="capabilities-item">End-user technical support &amp; workstation maintenance</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Windows 10/11</span>
+                <span class="skill-tag">Hardware Tools</span>
+                <span class="skill-tag">Diagnostics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 9: Networking -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <line x1="12" y1="8" x2="12" y2="12"></line>
+                  <circle cx="6" cy="19" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="6" y1="16" x2="12" y2="12"></line>
+                  <line x1="18" y1="16" x2="12" y2="12"></line>
+                </svg>
+              </div>
+              <span class="skill-index">09</span>
+            </div>
+            <h3 class="skill-title">Networking</h3>
+            <p class="skill-desc">
+              Structured cabling, local area network deployment, router configuration, and IP address troubleshooting.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">LAN cable crimping, switch setup &amp; router configuration</li>
+                <li class="capabilities-item">IP subnetting, DHCP &amp; DNS troubleshooting</li>
+                <li class="capabilities-item">Wi-Fi coverage optimization &amp; connection diagnostics</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">LAN / WAN</span>
+                <span class="skill-tag">Packet Tracer</span>
+                <span class="skill-tag">IP Routing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 10: Computer Hardware & Software -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                  <rect x="9" y="9" width="6" height="6"></rect>
+                  <line x1="9" y1="1" x2="9" y2="4"></line>
+                  <line x1="15" y1="1" x2="15" y2="4"></line>
+                  <line x1="9" y1="20" x2="9" y2="23"></line>
+                  <line x1="15" y1="20" x2="15" y2="23"></line>
+                  <line x1="20" y1="9" x2="23" y2="9"></line>
+                  <line x1="20" y1="14" x2="23" y2="14"></line>
+                  <line x1="1" y1="9" x2="4" y2="9"></line>
+                  <line x1="1" y1="14" x2="4" y2="14"></line>
+                </svg>
+              </div>
+              <span class="skill-index">10</span>
+            </div>
+            <h3 class="skill-title">Computer Hardware &amp; Software</h3>
+            <p class="skill-desc">
+              Comprehensive hardware architecture understanding, peripheral setup, software license management, and OS maintenance.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Component compatibility analysis &amp; benchmarking</li>
+                <li class="capabilities-item">Software installation, updates &amp; configuration</li>
+                <li class="capabilities-item">System performance optimization &amp; disk management</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Benchmarking</span>
+                <span class="skill-tag">Disk Utilities</span>
+                <span class="skill-tag">Hardware Tools</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 11: Microsoft Office -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                  <polyline points="14 2 14 8 20 8"></polyline>
+                  <line x1="16" y1="13" x2="8" y2="13"></line>
+                  <line x1="16" y1="17" x2="8" y2="17"></line>
+                  <polyline points="10 9 9 9 8 9"></polyline>
+                </svg>
+              </div>
+              <span class="skill-index">11</span>
+            </div>
+            <h3 class="skill-title">Microsoft Office</h3>
+            <p class="skill-desc">
+              Advanced document formatting, spreadsheet data processing, formula computation, and corporate presentation deck design.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Professional reports &amp; document typography in Word</li>
+                <li class="capabilities-item">Spreadsheet modeling, formulas &amp; charts in Excel</li>
+                <li class="capabilities-item">Impactful animated slides &amp; presentations in PowerPoint</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">MS Word</span>
+                <span class="skill-tag">MS Excel</span>
+                <span class="skill-tag">PowerPoint</span>
+                <span class="skill-tag">Google Docs</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 12: Front Desk & Administration -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="skill-index">12</span>
+            </div>
+            <h3 class="skill-title">Front Desk &amp; Administration</h3>
+            <p class="skill-desc">
+              Professional visitor reception, executive correspondence, telephone management, schedule coordination, and office administration.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Visitor welcoming, reception handling &amp; phone etiquette</li>
+                <li class="capabilities-item">Meeting scheduling, diary management &amp; documentation</li>
+                <li class="capabilities-item">Professional email communication &amp; file archiving</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">MS Outlook</span>
+                <span class="skill-tag">Google Calendar</span>
+                <span class="skill-tag">Office Admin</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill 13: Meta Ads Management -->
+          <div class="skill-card">
+            <div class="skill-header">
+              <div class="skill-icon-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <span class="skill-index">13</span>
+            </div>
+            <h3 class="skill-title">Meta Ads Management</h3>
+            <p class="skill-desc">
+              Paid Facebook &amp; Instagram ad campaign architecture, pixel tracking, budget scaling, and creative A/B testing.
+            </p>
+            <div class="skill-capabilities">
+              <span class="capabilities-heading">What I Can Do</span>
+              <ul class="capabilities-list">
+                <li class="capabilities-item">Campaign setup, objective selection &amp; funnel building</li>
+                <li class="capabilities-item">Custom &amp; lookalike audience segmentation</li>
+                <li class="capabilities-item">Ad copy testing, CTR optimization &amp; ROAS tracking</li>
+              </ul>
+            </div>
+            <div class="skill-tools-section">
+              <span class="tools-heading">Software &amp; Tools</span>
+              <div class="skill-tags">
+                <span class="skill-tag">Ads Manager</span>
+                <span class="skill-tag">Meta Business</span>
+                <span class="skill-tag">Pixel Setup</span>
+                <span class="skill-tag">A/B Testing</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Toggle View All Button -->
+        <div class="skills-toggle-wrapper">
+          <button class="btn btn-gold-outline" id="toggleSkillsBtn">
+            <span id="skillsToggleText">View All Skills (7 More)</span>
+            <svg id="skillsToggleIcon" class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transition: transform 0.3s ease;">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         4. SOFTWARE & TOOLS SECTION
+         Special Requirement: ONE single large rectangular container.
+         All software logos together inside that same rectangle.
+         Include Photoshop, Premiere Pro, After Effects, Illustrator, XD, Lightroom,
+         and all other tools. No separate Adobe section. No separate Other Tools section.
+         No circular rings. Designed to support independently animated logos later.
+         ========================================================================== -->
+    <section class="section section-alt" id="software">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Tool Ecosystem</span>
+          </div>
+          <h2 class="section-title">Software & <span class="text-gold">Tools</span></h2>
+          <p class="section-subtitle">Every professional creative suite and development environment housed in one unified ecosystem.</p>
+        </div>
+
+        <!-- THE ONE SINGLE LARGE RECTANGULAR ANIMATION CONTAINER (PHASE 5) -->
+        <div class="tools-single-container" id="toolsUnifiedContainer">
+          
+          <div class="tools-container-header">
+            <div class="tools-container-meta">
+              <h3 class="tools-container-title">Unified Software Ecosystem</h3>
+              <span class="tools-container-badge" id="toolsCounterBadge">28 Tools Active</span>
+            </div>
+            <div class="tools-container-hint">
+              <span>All creative, post-production, development &amp; office tools in one shared arena</span>
+            </div>
+          </div>
+
+          <!-- Controls Bar: Pause/Resume, Speed Controls & Live Search -->
+          <div class="tools-controls-bar">
+            <div class="tools-controls-left">
+              <button class="btn-tool-ctrl" id="pauseArenaBtn" aria-label="Pause or Resume Floating Motion">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                  <rect x="6" y="4" width="4" height="16"></rect>
+                  <rect x="14" y="4" width="4" height="16"></rect>
+                </svg>
+                <span>Pause Motion</span>
+              </button>
+              
+              <div style="display: flex; gap: 6px; align-items: center;" class="tools-speed-group">
+                <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 600;">Speed:</span>
+                <button class="btn-tool-ctrl" id="speed05Btn" data-speed="0.5">0.5x</button>
+                <button class="btn-tool-ctrl active" id="speed1Btn" data-speed="1.0">1.0x</button>
+                <button class="btn-tool-ctrl" id="speed25Btn" data-speed="2.5">2.5x</button>
+                <button class="btn-tool-ctrl" id="speed5Btn" data-speed="5.0">5.0x</button>
+              </div>
+            </div>
+
+            <div class="tools-controls-right">
+              <div class="tools-search-box">
+                <svg class="tools-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <input type="text" id="toolsSearchInput" class="tools-search-input" placeholder="Search software or tool...">
+              </div>
+            </div>
+          </div>
+
+          <!-- THE ONE LARGE RECTANGULAR ANIMATION ARENA -->
+          <!-- All software logos float independently inside this single rectangle -->
+          <div class="tools-floating-arena" id="toolsFloatingArena" role="region" aria-label="Interactive Software Floating Arena">
+            <!-- Dynamically populated and simulated by js/tools-arena.js -->
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         5. MY PROJECTS SECTION
+         Special Requirement: Create 8 independent project gallery layouts.
+         Each category must have its own gallery.
+         No fake projects. Real portfolio blueprint structures.
+         ========================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>8 Distinct Galleries</span>
+          </div>
+          <h2 class="section-title">My Project <span class="text-gold">Galleries</span></h2>
+          <p class="section-subtitle">Dedicated gallery architectures configured for each specialized creative medium.</p>
+        </div>
+
+        <!-- 8-Category Gallery Switcher Navigation (PHASE 6) -->
+        <div class="projects-nav-bar" role="tablist">
+          <button class="gallery-tab-btn active" data-gallery-target="uiux" role="tab">
+            <span>UI/UX Design</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="webdev" role="tab">
+            <span>Web Development</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="video" role="tab">
+            <span>Video Editing</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="photography" role="tab">
+            <span>Photography</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="videography" role="tab">
+            <span>Videography</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="graphic" role="tab">
+            <span>Graphic Design</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="marketing" role="tab">
+            <span>Digital Marketing</span>
+          </button>
+          <button class="gallery-tab-btn" data-gallery-target="technical" role="tab">
+            <span>IT &amp; Technical</span>
+          </button>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 1: UI/UX DESIGN PROJECTS
+             ========================================== -->
+        <div class="gallery-container active" id="gallery-uiux">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 01: UI/UX &amp; Product Design</h3>
+              <p>Device wireframes, responsive viewport prototypes, and design systems created in Figma.</p>
+            </div>
+            <span class="gallery-cat-badge">Figma Prototypes</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 2: WEB DEVELOPMENT PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-webdev">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 02: Front-End Web Development</h3>
+              <p>Responsive web interfaces, semantic architectures, and modern CSS layout engines.</p>
+            </div>
+            <span class="gallery-cat-badge">HTML5 / CSS3 / JavaScript</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 3: VIDEO EDITING PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-video">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 03: Video Editing &amp; Motion Storytelling</h3>
+              <p>Short-form vertical reels, YouTube Shorts, dynamic cuts, and audio synchronization.</p>
+            </div>
+            <span class="gallery-cat-badge">CapCut / InShot / Premiere</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 4: PHOTOGRAPHY PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-photography">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 04: Photography &amp; Visual Curation</h3>
+              <p>Portraits, event documentation, exposure correction, and tonal development in Adobe Lightroom.</p>
+            </div>
+            <span class="gallery-cat-badge">Lightroom RAW Development</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 5: VIDEOGRAPHY PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-videography">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 05: Videography &amp; Cinematography</h3>
+              <p>Widescreen 16:9 event highlights, multi-angle production, and documentary framing.</p>
+            </div>
+            <span class="gallery-cat-badge">4K Ultra HD Production</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 6: GRAPHIC DESIGN PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-graphic">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 06: Graphic Design &amp; Visual Branding</h3>
+              <p>Promotional banners, brand identity vectors, and typography compositions in Photoshop &amp; Illustrator.</p>
+            </div>
+            <span class="gallery-cat-badge">Photoshop &amp; Illustrator</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 7: DIGITAL MARKETING PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-marketing">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 07: Meta Ads &amp; Digital Marketing</h3>
+              <p>Facebook &amp; Instagram conversion campaigns, creative variant testing, and performance metrics.</p>
+            </div>
+            <span class="gallery-cat-badge">Meta Business Suite</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+        <!-- ==========================================
+             GALLERY 8: IT & TECHNICAL PROJECTS
+             ========================================== -->
+        <div class="gallery-container" id="gallery-technical">
+          <div class="gallery-category-header">
+            <div class="gallery-cat-info">
+              <h3>Gallery 08: Technical &amp; Academic Computing Projects</h3>
+              <p>Computer Science and engineering projects from Northern University Bangladesh &amp; Cumilla Polytechnic.</p>
+            </div>
+            <span class="gallery-cat-badge">Computer Science &amp; Engineering</span>
+          </div>
+          <div class="gallery-cards-grid"></div>
+          <div class="gallery-toggle-area"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         6. EXPERIENCE SECTION (PHASE 7)
+         All 5 entries from genuine CV records.
+         Clearly distinguishes practice & personal work from formal employment.
+         ========================================================================== -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Career Milestones</span>
+          </div>
+          <h2 class="section-title">Professional <span class="text-gold">Experience</span></h2>
+          <p class="section-subtitle">A transparent track record of practical visual execution, organizational leadership, and creative practice.</p>
+        </div>
+
+        <div class="timeline" id="experienceTimeline">
+          
+          <!-- Experience Item 1: Photography & Videography -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <h3 class="timeline-role">Photography &amp; Videography</h3>
+                  <span class="experience-badge personal">Creative &amp; Personal Projects</span>
+                </div>
+                <span class="timeline-period">Self-Directed Practice</span>
+              </div>
+              <div class="timeline-company">Dhaka, Bangladesh</div>
+              <ul class="timeline-duties">
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Captured photographs and video footage for creative, social, and event-related projects.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Edited short-form videos and social media reels using CapCut and InShot.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Enhanced photos in Adobe Lightroom: exposure adjustments, framing, and custom color presets.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Managed end-to-end visual workflow tailored for Facebook, Instagram, and YouTube platforms.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 2: Assistant Secretary -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <h3 class="timeline-role">Assistant Secretary — Photography and Videography</h3>
+                  <span class="experience-badge organizational">Organizational Appointment</span>
+                </div>
+                <span class="timeline-period">Institutional Media</span>
+              </div>
+              <div class="timeline-company">Student Leadership &amp; Media Committee</div>
+              <ul class="timeline-duties">
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Assisted with photography and videography activities during major organizational events.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Captured event photographs, videos, and important milestone moments.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Supported event planning and visual content coverage for social media release.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Collaborated with team members and maintained organized media archives for future use.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 3: UI/UX & Graphic Design Practice -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <h3 class="timeline-role">UI/UX and Graphic Design Practice</h3>
+                  <span class="experience-badge practice">Hands-on Design Practice</span>
+                </div>
+                <span class="timeline-period">Practical Projects</span>
+              </div>
+              <div class="timeline-company">Digital Design &amp; Interface Solutions</div>
+              <ul class="timeline-duties">
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Designed user-friendly interfaces, responsive layouts, and interactive wireframes in Figma.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Applied core UI/UX principles including usability heuristics, typography tokens, and color hierarchy.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Created marketing visual creatives and vector typography in Adobe Photoshop &amp; Illustrator.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 4: Meta Ads Management Practice -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <h3 class="timeline-role">Meta Ads Management Practice</h3>
+                  <span class="experience-badge practice">Campaign Operations Practice</span>
+                </div>
+                <span class="timeline-period">Digital Marketing</span>
+              </div>
+              <div class="timeline-company">Meta Advertising &amp; Social Growth</div>
+              <ul class="timeline-duties">
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Set up, ran, and managed advertising campaigns on Meta platforms (Facebook &amp; Instagram).</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Prepared high-CTR ad creatives and conversion-focused copy variants for A/B testing.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Monitored campaign delivery metrics, audience targeting segments, and engagement analytics.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Experience Item 5: Front Desk & Reception Support -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-meta">
+                <div>
+                  <h3 class="timeline-role">Front Desk &amp; Reception Support</h3>
+                  <span class="experience-badge support">Administrative Support Practice</span>
+                </div>
+                <span class="timeline-period">Office Coordination</span>
+              </div>
+              <div class="timeline-company">Office Administration &amp; Customer Relations</div>
+              <ul class="timeline-duties">
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Handled reception duties including welcoming visitors, telephone call management, and answering inquiries.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Maintained accurate administrative records, visitor logs, and daily office documentation.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Supported meeting coordination, appointment scheduling, and professional email correspondence.</span>
+                </li>
+                <li class="timeline-duty">
+                  <svg class="timeline-duty-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Utilized Microsoft Office (Word, Excel, PowerPoint) and Google Workspace for document management.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         7. EDUCATION SECTION
+         From his genuine CV
+         ========================================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Academic Foundations</span>
+          </div>
+          <h2 class="section-title">Education & <span class="text-gold">Qualifications</span></h2>
+          <p class="section-subtitle">Solid computational foundations and technical training in computer engineering.</p>
+        </div>
+
+        <div class="education-grid" id="educationGrid">
+          
+          <!-- Education 1: B.Sc Northern University -->
+          <div class="edu-card">
+            <span class="edu-card-badge">Undergraduate Degree</span>
+            <h3 class="edu-degree">B.Sc in Computer Science & Engineering</h3>
+            <div class="edu-institution">Northern University Bangladesh</div>
+            <div class="edu-location">Dhaka, Bangladesh • 05/2026 – 05/2030</div>
+            <div class="edu-curriculum">
+              <div class="edu-curriculum-title">Areas of Focus:</div>
+              <div class="edu-curriculum-tags">
+                <span class="edu-tag">Software Engineering</span>
+                <span class="edu-tag">Algorithms</span>
+                <span class="edu-tag">Database Systems</span>
+                <span class="edu-tag">Web Technologies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 2: Diploma Cumilla Polytechnic -->
+          <div class="edu-card">
+            <span class="edu-card-badge">Polytechnic Diploma</span>
+            <h3 class="edu-degree">Diploma in Computer Science & Technology</h3>
+            <div class="edu-institution">Cumilla Polytechnic Institute</div>
+            <div class="edu-location">Cumilla, Bangladesh • Completed</div>
+            <div class="edu-curriculum">
+              <div class="edu-curriculum-title">Relevant Curricula:</div>
+              <div class="edu-curriculum-tags">
+                <span class="edu-tag">Computer Fundamentals</span>
+                <span class="edu-tag">Programming Concepts</span>
+                <span class="edu-tag">Hardware Maintenance</span>
+                <span class="edu-tag">Computer Networking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education 3: SSC Kadior High School -->
+          <div class="edu-card">
+            <span class="edu-card-badge">Secondary Certification</span>
+            <h3 class="edu-degree">Secondary School Certificate (SSC)</h3>
+            <div class="edu-institution">Kadior High School</div>
+            <div class="edu-location">Cumilla, Bangladesh • 2021 (Science)</div>
+            <div class="edu-curriculum">
+              <div class="edu-curriculum-title">Foundation:</div>
+              <div class="edu-curriculum-tags">
+                <span class="edu-tag">Science Group</span>
+                <span class="edu-tag">Mathematics</span>
+                <span class="edu-tag">Physics</span>
+                <span class="edu-tag">Information Tech</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         8. SOCIAL MEDIA SECTION
+         Special Requirement: Display Instagram, Facebook, LinkedIn, and WhatsApp icons
+         side-by-side in one row.
+         ========================================================================== -->
+    <section class="section section-alt" id="social">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Digital Presence</span>
+          </div>
+          <h2 class="section-title">Connect on <span class="text-gold">Social Media</span></h2>
+          <p class="section-subtitle">Reach out or follow my creative work and design insights across platforms.</p>
+        </div>
+
+        <!-- Social Media Icons Side-By-Side In ONE Row -->
+        <div class="social-single-row-container">
+          <div class="social-single-row">
+            
+            <!-- 1. Instagram -->
+            <a href="https://www.instagram.com/nurr_exits?rpxt=emY3dGx6MDBkbXQw" target="_blank" rel="noopener noreferrer" class="social-card" id="socialLinkInstagram">
+              <div class="social-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </div>
+              <h3 class="social-platform-name">Instagram</h3>
+              <span class="social-handle">@nurr_exits</span>
+              <span class="social-action-label">
+                <span>View Visuals</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- 2. Facebook -->
+            <a href="https://www.facebook.com/share/18mDW9p1Uw/" target="_blank" rel="noopener noreferrer" class="social-card" id="socialLinkFacebook">
+              <div class="social-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                </svg>
+              </div>
+              <h3 class="social-platform-name">Facebook</h3>
+              <span class="social-handle">Md Foysal Al Nur</span>
+              <span class="social-action-label">
+                <span>Connect</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- 3. LinkedIn -->
+            <a href="https://www.linkedin.com/in/faysal-al-nur-a7952428a?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" class="social-card" id="socialLinkLinkedIn">
+              <div class="social-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </div>
+              <h3 class="social-platform-name">LinkedIn</h3>
+              <span class="social-handle">Md Foysal Al Nur</span>
+              <span class="social-action-label">
+                <span>Network</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+            <!-- 4. WhatsApp -->
+            <a href="https://wa.me/qr/EWOZNHWPW7EOJ1" target="_blank" rel="noopener noreferrer" class="social-card" id="socialLinkWhatsApp">
+              <div class="social-icon-circle">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </div>
+              <h3 class="social-platform-name">WhatsApp</h3>
+              <span class="social-handle">+880 1855-669424</span>
+              <span class="social-action-label">
+                <span>Chat Direct</span>
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </span>
+            </a>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         9. CONTACT ME SECTION (PHASE 10)
+         Clean contact form, validated submission, and direct WhatsApp contact
+         ========================================================================== -->
+    <section class="section" id="contact">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Get In Touch</span>
+          </div>
+          <h2 class="section-title">Contact <span class="text-gold">Me</span></h2>
+          <p class="section-subtitle">Let's collaborate on UI/UX design, video editing, or web development projects.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left: Contact Information Area -->
+          <div class="contact-info-panel">
+            <h3 class="contact-panel-title">Let's Build Something Exceptional</h3>
+            <p class="contact-panel-subtitle">
+              Whether you need high-fidelity prototypes, cinematic video cuts, or a modern web experience, feel free to reach out directly.
+            </p>
+
+            <div class="contact-cards-stack">
+              
+              <!-- Direct Email -->
+              <div class="contact-entry">
+                <div class="contact-entry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-entry-content">
+                  <span class="contact-entry-label">Direct Email</span>
+                  <a href="mailto:faysalnur416@gmail.com" class="contact-entry-value">faysalnur416@gmail.com</a>
+                </div>
+              </div>
+
+              <!-- Phone & Direct Call -->
+              <div class="contact-entry">
+                <div class="contact-entry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                  </svg>
+                </div>
+                <div class="contact-entry-content">
+                  <span class="contact-entry-label">Direct Phone</span>
+                  <a href="tel:+8801855669424" class="contact-entry-value">+880 1855-669424</a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="contact-entry">
+                <div class="contact-entry-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                    <circle cx="12" cy="10" r="3"></circle>
+                  </svg>
+                </div>
+                <div class="contact-entry-content">
+                  <span class="contact-entry-label">Location</span>
+                  <span class="contact-entry-value">Dhaka, Bangladesh</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Direct WhatsApp Button -->
+            <div style="margin-top: 28px;">
+              <a href="https://wa.me/qr/EWOZNHWPW7EOJ1" target="_blank" rel="noopener noreferrer" class="btn btn-cyber" style="width: 100%; justify-content: center; gap: 10px;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+                <span>Instant Chat on WhatsApp</span>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right: Clean Contact Form -->
+          <div class="contact-form-panel">
+            <form id="contactForm" novalidate>
+              
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label for="contactName" class="form-label">Full Name *</label>
+                  <input type="text" id="contactName" name="name" class="form-input" placeholder="e.g. Alex Morgan" required>
+                  <span class="form-error-msg" id="contactNameError" style="display:none; color: #ef4444; font-size: 0.78rem; margin-top: 4px;">Please enter your name.</span>
+                </div>
+                <div class="form-field">
+                  <label for="contactEmail" class="form-label">Email Address *</label>
+                  <input type="email" id="contactEmail" name="email" class="form-input" placeholder="alex@company.com" required>
+                  <span class="form-error-msg" id="contactEmailError" style="display:none; color: #ef4444; font-size: 0.78rem; margin-top: 4px;">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label for="contactService" class="form-label">Service Needed</label>
+                  <select id="contactService" class="form-select">
+                    <option value="uiux">UI/UX &amp; Product Design</option>
+                    <option value="video">Video Editing / Reels</option>
+                    <option value="webdev">Front-End Web Development</option>
+                    <option value="graphic">Graphic Design &amp; Branding</option>
+                    <option value="meta">Meta Ads Management</option>
+                    <option value="photo">Photography / Videography</option>
+                    <option value="general">General Inquiry</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="contactSubject" class="form-label">Subject *</label>
+                  <input type="text" id="contactSubject" name="subject" class="form-input" placeholder="Project details or timeline" required>
+                  <span class="form-error-msg" id="contactSubjectError" style="display:none; color: #ef4444; font-size: 0.78rem; margin-top: 4px;">Please provide a subject.</span>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="contactMessage" class="form-label">Your Message *</label>
+                <textarea id="contactMessage" name="message" class="form-textarea" placeholder="Describe your project scope, requirements, or goals..." required></textarea>
+                <span class="form-error-msg" id="contactMessageError" style="display:none; color: #ef4444; font-size: 0.78rem; margin-top: 4px;">Please enter your message.</span>
+              </div>
+
+              <button type="submit" id="contactSubmitBtn" class="btn btn-primary" style="width: 100%;">
+                <span>Send Message to MD Foysal Al Nur</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <!-- Feedback Alerts -->
+              <div id="contactSuccessAlert" style="display: none; margin-top: 20px; padding: 14px 18px; border-radius: var(--radius-sm); background: rgba(34, 197, 94, 0.12); border: 1px solid #22c55e; color: #4ade80; font-size: 0.9rem; text-align: center;">
+                ✓ Message received! Saved into Admin Contact Inbox. MD Foysal Al Nur will connect with you shortly.
+              </div>
+              <div id="contactErrorAlert" style="display: none; margin-top: 20px; padding: 14px 18px; border-radius: var(--radius-sm); background: rgba(239, 68, 68, 0.12); border: 1px solid #ef4444; color: #f87171; font-size: 0.9rem; text-align: center;">
+                ✕ Please ensure all required fields are filled out with valid information.
+              </div>
+
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         10. FEEDBACK & REVIEWS SECTION (PHASE 11)
+         Approved reviews displayed on public website.
+         Interactive feedback submission form with 1-5 star rating.
+         ========================================================================== -->
+    <section class="section section-alt" id="reviews">
+      <div class="container">
+        
+        <div class="section-header">
+          <div class="section-badge">
+            <span class="badge-dot"></span>
+            <span>Client Endorsements</span>
+          </div>
+          <h2 class="section-title">Feedback &amp; <span class="text-gold">Reviews</span></h2>
+          <p class="section-subtitle">Real feedback and endorsements from colleagues, clients, and project partners.</p>
+        </div>
+
+        <!-- Approved Reviews Grid (Dynamically rendered from DB) -->
+        <div class="reviews-grid" id="approvedReviewsGrid">
+          <!-- Dynamically populated via js/main.js and js/db.js -->
+        </div>
+
+        <!-- Interactive Leave a Review Area -->
+        <div class="feedback-submission-wrapper" style="margin-top: 48px; max-width: 760px; margin-left: auto; margin-right: auto;">
+          <div class="feedback-toggle-banner" style="text-align: center; margin-bottom: 24px;">
+            <button type="button" id="toggleFeedbackFormBtn" class="btn btn-outline" style="gap: 8px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"></path>
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+              </svg>
+              <span>Leave a Review / Submit Feedback</span>
+            </button>
+          </div>
+
+          <!-- Hidden Form Container (Toggles on button click) -->
+          <div id="feedbackFormCard" class="contact-form-panel" style="display: none; border-color: var(--gold-border); box-shadow: var(--gold-glow-subtle);">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+              <div>
+                <h3 style="font-size: 1.35rem; color: #FFFFFF; margin-bottom: 4px;">Share Your Collaboration Feedback</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted);">Reviews require admin approval before appearing on the public portfolio.</p>
+              </div>
+              <button type="button" id="closeFeedbackFormBtn" style="background: none; border: none; color: var(--text-muted); cursor: pointer; font-size: 1.5rem; line-height: 1;">&times;</button>
+            </div>
+
+            <form id="feedbackForm" novalidate>
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label for="feedbackName" class="form-label">Your Name *</label>
+                  <input type="text" id="feedbackName" class="form-input" placeholder="e.g. S. M. Farhan" required>
+                  <span class="form-error-msg" id="feedbackNameError" style="display:none; color: #ef4444; font-size: 0.78rem; margin-top: 4px;">Please enter your name.</span>
+                </div>
+                <div class="form-field">
+                  <label for="feedbackRole" class="form-label">Your Role / Organization</label>
+                  <input type="text" id="feedbackRole" class="form-input" placeholder="e.g. Product Manager / Client">
+                </div>
+              </div>
+
+              <div class="form-group-row">
+                <div class="form-field">
+                  <label for="feedbackEmail" class="form-label">Email Address (Optional, kept private)</label>
+                  <input type="email" id="feedbackEmail" class="form-input" placeholder="your-email@example.com">
+                </div>
+                <div class="form-field">
+                  <label class="form-label">Rating (1 to 5 Stars) *</label>
+                  <div class="interactive-star-rating" id="starRatingContainer" style="display: flex; gap: 8px; align-items: center; padding-top: 6px;">
+                    <button type="button" class="star-btn" data-rating="1" style="background:none; border:none; cursor:pointer; color: #60A5FA; font-size: 1.6rem; padding: 0;">★</button>
+                    <button type="button" class="star-btn" data-rating="2" style="background:none; border:none; cursor:pointer; color: #60A5FA; font-size: 1.6rem; padding: 0;">★</button>
+                    <button type="button" class="star-btn" data-rating="3" style="background:none; border:none; cursor:pointer; color: #60A5FA; font-size: 1.6rem; padding: 0;">★</button>
+                    <button type="button" class="star-btn" data-rating="4" style="background:none; border:none; cursor:pointer; color: #60A5FA; font-size: 1.6rem; padding: 0;">★</button>
+                    <button type="button" class="star-btn active" data-rating="5" style="background:none; border:none; cursor:pointer; color: #60A5FA; font-size: 1.6rem; padding: 0;">★</button>
+                    <span id="starRatingValue" style="margin-left: 8px; font-weight: 700; color: #60A5FA; font-size: 0.95rem;">5.0 / 5.0</span>
+                    <input type="hidden" id="feedbackRatingInput" value="5">
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="feedbackMessage" class="form-label">Review / Feedback Message *</label>
+                <textarea id="feedbackMessage" class="form-textarea" placeholder="Share your experience working with MD Foysal Al Nur..." required></textarea>
+                <span class="form-error-msg" id="feedbackMessageError" style="display:none; color: #ef4444; font-size: 0.78rem; margin-top: 4px;">Please write your review message.</span>
+              </div>
+
+              <button type="submit" id="feedbackSubmitBtn" class="btn btn-primary" style="width: 100%;">
+                <span>Submit Feedback for Admin Moderation</span>
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </button>
+
+              <div id="feedbackSuccessAlert" style="display: none; margin-top: 18px; padding: 14px 18px; border-radius: var(--radius-sm); background: rgba(34, 197, 94, 0.12); border: 1px solid #22c55e; color: #4ade80; font-size: 0.9rem; text-align: center;">
+                ✓ Thank you for your feedback! Your review has been submitted for moderation and will appear once approved by MD Foysal Al Nur.
+              </div>
+              <div id="feedbackErrorAlert" style="display: none; margin-top: 18px; padding: 14px 18px; border-radius: var(--radius-sm); background: rgba(239, 68, 68, 0.12); border: 1px solid #ef4444; color: #f87171; font-size: 0.9rem; text-align: center;">
+                ✕ Please fill out your name and feedback message.
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       11. FOOTER SECTION (PHASE 12)
+       MD FOYSAL AL NUR | Tagline | Quick Links | Contact Details | Social Icons
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        <!-- Col 1: Brand & Tagline -->
+        <div>
+          <a href="#hero" class="brand-logo">
+            <div class="brand-monogram">
+              <img src="assets/logo_transparent.png" alt="MD Foysal Al Nur Monogram" height="38">
+            </div>
+            <div class="brand-text">
+              <span class="brand-name">MD FOYSAL <span>AL NUR</span></span>
+              <span class="brand-tagline">UI/UX Designer &amp; Web Developer</span>
+            </div>
+          </a>
+          <p class="footer-brand-bio" style="font-size: 1.05rem; font-weight: 600; color: var(--gold-light); margin-top: 16px; margin-bottom: 8px;">
+            "Creative Mind. Technical Vision. Digital Excellence."
+          </p>
+          <p class="footer-brand-bio" style="font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6;">
+            A premier personal portfolio combining human-centered product design, creative motion editing, front-end development, and computer science foundations.
+          </p>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div>
+          <h4 class="footer-col-title">Navigation</h4>
+          <ul class="footer-links-list">
+            <li><a href="#hero" class="footer-link">Home</a></li>
+            <li><a href="#about" class="footer-link">About Me</a></li>
+            <li><a href="#skills" class="footer-link">My Skills</a></li>
+            <li><a href="#software" class="footer-link">Software &amp; Tools</a></li>
+            <li><a href="#projects" class="footer-link">My Projects</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Sections & Contact Details -->
+        <div>
+          <h4 class="footer-col-title">Contact Details</h4>
+          <ul class="footer-links-list" style="gap: 12px;">
+            <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.88rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold-primary); flex-shrink: 0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              <a href="mailto:faysalnur416@gmail.com" class="footer-link" style="word-break: break-all;">faysalnur416@gmail.com</a>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.88rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold-primary); flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              <a href="tel:+8801855669424" class="footer-link">+880 1855-669424</a>
+            </li>
+            <li style="display: flex; align-items: center; gap: 8px; color: var(--text-secondary); font-size: 0.88rem;">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--gold-primary); flex-shrink: 0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              <span>Dhaka, Bangladesh</span>
+            </li>
+          </ul>
+
+          <!-- Social Media Icons Row in Footer (Phase 12) -->
+          <div style="margin-top: 18px; display: flex; gap: 10px;">
+            <a href="https://www.instagram.com/nurr_exits?rpxt=emY3dGx6MDBkbXQw" target="_blank" rel="noopener noreferrer" title="Instagram" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); transition: all 0.2s;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="https://www.facebook.com/share/18mDW9p1Uw/" target="_blank" rel="noopener noreferrer" title="Facebook" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); transition: all 0.2s;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/faysal-al-nur-a7952428a?utm_source=share_via&amp;utm_content=profile&amp;utm_medium=member_android" target="_blank" rel="noopener noreferrer" title="LinkedIn" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); transition: all 0.2s;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+            </a>
+            <a href="https://wa.me/qr/EWOZNHWPW7EOJ1" target="_blank" rel="noopener noreferrer" title="WhatsApp" style="width: 36px; height: 36px; border-radius: 50%; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; color: var(--gold-primary); transition: all 0.2s;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 4: Private Admin Portal -->
+        <div>
+          <h4 class="footer-col-title">Restricted Access</h4>
+          <div class="footer-admin-card">
+            <p>Administrative management portal is strictly partitioned from public browsing.</p>
+            <a href="admin.html" class="btn btn-gold-outline" style="padding: 10px 18px; font-size: 0.84rem; width: 100%;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+              <span>Admin Dashboard Portal</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <span class="copyright-text">
+          &copy; 2026 MD FOYSAL AL NUR. All Rights Reserved. Crafted with Precision Engineering &amp; Modern Visual Craft.
+        </span>
+
+        <a href="#hero" class="back-to-top-btn" id="backToTop">
+          <span>Back to Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <polyline points="18 15 12 9 6 15"></polyline>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PROJECT FULL CASE STUDY MODAL (PHASE 6)
+       Opens on clicking any project card in the 8 galleries
+       ========================================================================== -->
+  <div class="project-modal" id="projectDetailsModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="project-modal-backdrop" id="projectModalBackdrop"></div>
+    <div class="project-modal-dialog">
+      <button class="project-modal-close" id="projectModalCloseBtn" aria-label="Close project modal">&times;</button>
+      <div class="project-modal-body" id="projectModalBody">
+        <!-- Dynamically injected by ProjectsGalleryManager.openModal() -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Files -->
+  <script src="js/db.js"></script>
+  <script src="js/tools-arena.js"></script>
+  <script src="js/projects-manager.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
